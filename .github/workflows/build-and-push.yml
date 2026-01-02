@@ -29,12 +29,12 @@ jobs:
 
     - name: Build and Push images-services image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/images-services:latest
-        docker build -t $IMAGE ./images-services
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/images-service:latest
+        docker build -t $IMAGE ./images-service
         docker push $IMAGE
 
     - name: Build and Push users-services image
       run: |
-        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/users-services:latest
-        docker build -t $IMAGE ./users-services
+        IMAGE=${{ secrets.ACR_NAME }}.azurecr.io/users-service:latest
+        docker build -t $IMAGE ./users-service
         docker push $IMAGE
