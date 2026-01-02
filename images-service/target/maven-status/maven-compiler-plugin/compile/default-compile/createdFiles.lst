@@ -1,0 +1,4 @@
+com/example/images/model/Image.class
+com/example/images/ImagesApplication.class
+com/example/images/service/BlobService.class
+com/example/images/controller/ImageController.class
