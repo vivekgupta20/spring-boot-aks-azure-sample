@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: image-service
+  name: images-service
   namespace: app
 spec:
   type: ClusterIP
   selector:
-    app: image-service
+    app: images-service
   ports:
     - port: 8080
       targetPort: 8082

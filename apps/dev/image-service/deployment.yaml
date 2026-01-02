@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service
+  name: images-service
   namespace: app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: user-service
+      app: images-service
   template:
     metadata:
       labels:
-        app: user-service
+        app: images-service
     spec:
       containers:
-        - name: image-service
-          image: acraksworkshopdev.azurecr.io/image-service:latest
+        - name: images-service
+          image: acraksworkshopdev.azurecr.io/images-service:latest
           ports:
             - containerPort: 8082
